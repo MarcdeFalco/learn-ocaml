@@ -115,11 +115,11 @@ body {
 /* -------------------- two columns mode -------------------------- */
 @media (min-width: 1200px) {
   #learnocaml-exo-toolbar {
-    width: 800px;
+    width: 60%;
   }
   #learnocaml-exo-tab-editor::after {
     position: absolute;
-    left: 800px; top: -61px; bottom: 0; width: 10px;
+    left: 60%; top: -61px; bottom: 0; width: 10px;
     background: linear-gradient(to right, #fff 0px, #fff 1px, rgba(0,0,0,0.6) 1px, rgba(0,0,0,0) 10px);
     content:"";
   }
@@ -127,7 +127,7 @@ body {
     display: none;
   }
   #learnocaml-exo-tab-buttons {
-    left: 800px; right: 0px; top: 0px;
+    left: 60%; right: 0px; top: 0px;
   }
   #learnocaml-exo-button-editor.front-tab ~ #learnocaml-exo-button-toplevel {
     border-bottom: none;
@@ -141,10 +141,10 @@ body {
     opacity: 1;
   }
   #learnocaml-exo-tabs > * {
-    left: 800px; top: 40px; right: 0px; bottom: 0px;
+    left: 60%; top: 40px; right: 0px; bottom: 0px;
   }
   #learnocaml-exo-tabs > #learnocaml-exo-tab-editor {
-    width: 800px; left: 0; bottom: 0; top: 61px;
+    width: 60%; left: 0; bottom: 0; top: 61px;
     z-index: 1000;
     opacity: 1;
   }
