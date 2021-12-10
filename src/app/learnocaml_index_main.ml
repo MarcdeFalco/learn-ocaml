@@ -230,7 +230,10 @@ let lessons_tab select (arg, set_arg, _delete_arg) () =
          Learnocaml_toplevel.print_html top ("<h3>" ^ step_title ^ "</h3>") ;
          let do_phrase = function
            | Lesson.Text text ->
-               Learnocaml_toplevel.print_html top text ;
+               Learnocaml_toplevel.print_html top text;
+               Lwt.return ()
+           | Lesson.Markdown md ->
+               Learnocaml_toplevel.print_html top Omd.(md|>of_string|>to_html) ;
                Lwt.return ()
            | Lesson.Code code ->
                Learnocaml_toplevel.execute_phrase top code >>= fun _ ->

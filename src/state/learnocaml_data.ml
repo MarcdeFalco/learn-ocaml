@@ -997,6 +997,7 @@ module Lesson = struct
 
   type phrase =
     | Text of string
+    | Markdown of string
     | Code of string
 
   type step = {
@@ -1027,11 +1028,15 @@ module Lesson = struct
                   (list @@ union
                      [ case
                          (obj1 (req "html" string))
-                         (function Text text -> Some text | Code _ -> None)
+                         (function Text text -> Some text | _ -> None)
                          (fun text -> Text text) ;
                        case
+                         (obj1 (req "markdown" string))
+                         (function Markdown text -> Some text | _ -> None)
+                         (fun text -> Markdown text) ;
+                       case
                          (obj1 (req "code" string))
-                         (function Code code -> Some code | Text _ -> None)
+                         (function Code code -> Some code | _ -> None)
                          (fun code -> Code code) ])))))
 
   module Index = struct

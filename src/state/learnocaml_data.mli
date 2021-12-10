@@ -313,6 +313,7 @@ module Lesson: sig
 
   type phrase =
     | Text of string
+    | Markdown of string
     | Code of string
 
   type step = {
