@@ -265,8 +265,8 @@ body {
 #learnocaml-exo-tab-editor > .pane {
   position: absolute;
   left: 0; top: 0px; bottom: 40px; width: 100%;
-  background: #666;
-  color: #fff;
+  /*background: #666;
+  color: #fff;*/
   z-index: 1002;
 }
 #learnocaml-exo-tab-editor > .buttons {
@@ -677,6 +677,7 @@ body {
   background: rgba(200,200,200,0.9);
 }
 /* -------------------- ACE overriding ---------------------------- */
+/*
 #learnocaml-exo-editor-pane {
   font-size: 18px;
   font-family: 'Inconsolata', monospace;
@@ -721,6 +722,7 @@ body {
 #learnocaml-exo-editor-pane .ace_selection { background: #e80; opacity: 0.4; }
 #learnocaml-exo-editor-pane .ace_active-line { background: #acf; opacity: 0.2; }
 #learnocaml-exo-editor-pane .ace_selected-word { background: #e80; opacity: 0.2; }
+*/
 
 #learnocaml-exo-editor-pane.ocaml-check-success::after,
 #learnocaml-exo-editor-pane.ocaml-check-warn::after,
