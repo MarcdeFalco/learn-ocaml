@@ -219,7 +219,7 @@ type config = {
 let config =
   ref {
     indent = IndentConfig.({default with i_match_clause = 4});
-    forced = true;
+    forced = false;
   }
 
 let get_next_line_indent state ~line ~tab =
